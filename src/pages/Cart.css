@@ -1,0 +1,38 @@
+.cart-page { background: var(--bg-primary); }
+.cart-layout { display: grid; grid-template-columns: 1fr 360px; gap: 32px; align-items: start; }
+.cart-items { display: flex; flex-direction: column; gap: 16px; }
+.cart-item {
+  display: flex; align-items: center; gap: 16px; padding: 20px;
+}
+.cart-item-reserved { border-color: rgba(34,197,94,0.3); }
+.cart-item-img { flex-shrink: 0; }
+.cart-item-info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.cart-item-name { font-weight: 700; font-size: 1rem; }
+.cart-item-name:hover { color: var(--blue); }
+.cart-item-tagline { font-size: 0.82rem; color: var(--text-secondary); }
+.cart-reserved-badge { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--green); font-weight: 600; }
+.reservation-timer {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.8rem; color: var(--text-secondary);
+  background: rgba(79,142,247,0.08); border: 1px solid rgba(79,142,247,0.2);
+  padding: 4px 10px; border-radius: 6px; width: fit-content;
+}
+.reservation-timer svg { color: var(--blue); }
+.reservation-timer.urgent { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.2); color: var(--red); }
+.reservation-timer.urgent svg { color: var(--red); }
+.reservation-timer.expired { background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.3); color: var(--red); }
+.cart-item-qty { display: flex; align-items: center; gap: 10px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 4px 8px; }
+.cart-item-qty span { min-width: 24px; text-align: center; font-weight: 700; }
+.cart-item-price { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; min-width: 100px; }
+.cart-item-total { font-size: 1.1rem; font-weight: 800; }
+.cart-item-unit { font-size: 0.78rem; color: var(--text-muted); }
+.cart-remove { color: var(--text-muted) !important; }
+.cart-remove:hover { color: var(--red) !important; }
+.cart-summary h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+.summary-row { display: flex; justify-content: space-between; font-size: 0.95rem; color: var(--text-secondary); padding: 6px 0; }
+.summary-total { font-size: 1.1rem; font-weight: 800; color: var(--text-primary); }
+@media (max-width: 768px) {
+  .cart-layout { grid-template-columns: 1fr; }
+  .cart-item { flex-wrap: wrap; }
+  .cart-item-price { min-width: auto; }
+}

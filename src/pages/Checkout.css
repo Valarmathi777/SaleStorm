@@ -1,0 +1,40 @@
+.checkout-page { background: var(--bg-primary); }
+.checkout-reservation-banner {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(79,142,247,0.08); border: 1px solid rgba(79,142,247,0.25);
+  padding: 14px 20px; border-radius: var(--radius); margin-bottom: 32px;
+  font-size: 0.95rem; flex-wrap: wrap;
+}
+.checkout-reservation-banner svg { color: var(--blue); flex-shrink: 0; }
+.checkout-reservation-banner.urgent { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.3); }
+.checkout-reservation-banner.urgent svg { color: var(--red); }
+.text-red { color: var(--red); font-weight: 700; }
+.checkout-layout { display: grid; grid-template-columns: 1fr 360px; gap: 32px; align-items: start; }
+.checkout-main { display: flex; flex-direction: column; gap: 24px; }
+.checkout-section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.checkout-section-header h3 { font-size: 1.05rem; font-weight: 700; }
+.address-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.address-field { display: flex; flex-direction: column; gap: 6px; }
+.address-field.full-width { grid-column: span 2; }
+.address-field label { font-size: 0.82rem; color: var(--text-secondary); font-weight: 500; }
+.checkout-input {
+  background: var(--bg-secondary); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 10px 14px;
+  color: var(--text-primary); font-size: 0.9rem;
+  transition: border-color var(--transition);
+}
+.checkout-input:focus { outline: none; border-color: var(--blue); }
+.reservation-details { display: flex; flex-direction: column; gap: 12px; }
+.res-detail-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.res-detail-row:last-child { border-bottom: none; }
+.res-id { font-family: monospace; font-size: 0.82rem; color: var(--blue); }
+.checkout-product-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.checkout-product-row > div:nth-child(2) { flex: 1; }
+.font-bold { font-weight: 700; }
+.checkout-sidebar { position: sticky; top: 90px; }
+@media (max-width: 768px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+  .address-grid { grid-template-columns: 1fr; }
+  .address-field.full-width { grid-column: span 1; }
+  .checkout-sidebar { position: static; }
+}

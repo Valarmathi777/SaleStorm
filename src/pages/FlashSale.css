@@ -1,0 +1,84 @@
+.flash-page { background: var(--bg-primary); }
+.flash-hero {
+  position: relative; padding: 100px 0 60px;
+  background: linear-gradient(180deg, rgba(239,68,68,0.06) 0%, transparent 100%);
+  text-align: center; overflow: hidden;
+}
+.flash-hero-bg {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(239,68,68,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239,68,68,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.flash-hero-inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.flash-live-badge { margin-bottom: 8px; }
+.flash-title {
+  font-size: clamp(3rem, 8vw, 6rem); font-weight: 900;
+  letter-spacing: -0.03em; color: var(--red);
+  display: flex; align-items: center; gap: 16px;
+  text-shadow: 0 0 60px rgba(239,68,68,0.4);
+}
+.flash-sub { font-size: 1.2rem; color: var(--text-secondary); }
+.flash-timer { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+.timer-block { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.timer-num {
+  font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900;
+  background: var(--bg-card); border: 1px solid var(--border);
+  padding: 12px 20px; border-radius: var(--radius);
+  min-width: 90px; text-align: center; letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+.timer-label { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); letter-spacing: 0.15em; }
+.timer-sep { font-size: 3rem; font-weight: 900; color: var(--red); margin-bottom: 20px; }
+.flash-demand {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.9rem; color: var(--text-secondary);
+  background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.2);
+  padding: 8px 16px; border-radius: 20px;
+}
+.flash-demand svg { color: var(--orange); }
+
+/* Inventory bar */
+.flash-inventory-bar {
+  display: flex; align-items: center; gap: 0; margin-bottom: 40px;
+  padding: 20px 32px; flex-wrap: wrap; gap: 16px;
+}
+.fib-item { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; min-width: 80px; }
+.fib-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.fib-val { font-size: 2rem; font-weight: 900; }
+.fib-green { color: var(--green); }
+.fib-orange { color: var(--orange); }
+.fib-red { color: var(--red); }
+.fib-blue { color: var(--blue); }
+.fib-divider { width: 1px; height: 40px; background: var(--border); }
+.fib-progress { flex: 2; min-width: 200px; display: flex; flex-direction: column; gap: 6px; }
+.fib-progress-label { font-size: 0.8rem; color: var(--text-secondary); }
+
+/* Flash grid */
+.flash-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.flash-card { position: relative; display: flex; flex-direction: column; gap: 0; padding: 0; overflow: hidden; }
+.flash-card-primary { border-color: var(--red); box-shadow: 0 0 30px rgba(239,68,68,0.15); grid-column: span 1; }
+.flash-card-crown {
+  background: linear-gradient(90deg, var(--red), var(--orange));
+  color: #fff; font-size: 0.72rem; font-weight: 800;
+  padding: 6px 16px; display: flex; align-items: center; gap: 6px;
+  letter-spacing: 0.08em;
+}
+.flash-card-tag { position: absolute; top: 12px; right: 12px; z-index: 2; }
+.flash-card-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.flash-card-name { font-size: 1.05rem; font-weight: 700; margin-top: 4px; }
+.flash-card-name:hover { color: var(--blue); }
+.flash-card-tagline { font-size: 0.82rem; color: var(--text-secondary); }
+.flash-card-price { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.flash-card-stock-info { display: flex; flex-direction: column; gap: 6px; }
+.flash-stock-row { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-secondary); }
+.flash-stock-simple { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--text-secondary); }
+.flash-card-actions { display: flex; gap: 8px; margin-top: auto; }
+
+@media (max-width: 1024px) { .flash-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) {
+  .flash-grid { grid-template-columns: 1fr; }
+  .flash-inventory-bar { justify-content: center; }
+  .fib-divider { display: none; }
+  .timer-num { min-width: 70px; padding: 10px 14px; }
+}

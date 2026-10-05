@@ -1,0 +1,24 @@
+.oc-page { background: var(--bg-primary); }
+.oc-card {
+  max-width: 600px; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; padding: 48px;
+  border-color: rgba(34,197,94,0.3);
+  box-shadow: 0 0 40px rgba(34,197,94,0.1);
+}
+.oc-icon { color: var(--green); margin-bottom: 8px; }
+.oc-title { font-size: 2rem; font-weight: 900; margin-bottom: 8px; }
+.oc-sub { color: var(--text-secondary); margin-bottom: 32px; }
+.oc-details { width: 100%; display: flex; flex-direction: column; gap: 0; margin-bottom: 32px; }
+.oc-detail-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+.oc-detail-row:last-child { border-bottom: none; }
+.oc-detail-label { color: var(--text-muted); }
+.oc-detail-val { font-weight: 500; }
+.oc-detail-val.mono { font-family: monospace; color: var(--blue); }
+.oc-detail-val.green { color: var(--green); font-weight: 700; }
+.oc-detail-val.bold { font-weight: 900; font-size: 1.1rem; }
+.oc-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
